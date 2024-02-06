@@ -1,0 +1,42 @@
+;
+; L_00.asm
+/*
+	1.DataSheet
+		-AVR CPU Core
+			-pipelining
+	2.View Help
+		-Assembler syntax **Register restriction (0-15 & 16-31)
+		-Assembler directives
+		-Expressions
+			-functions
+			-operands
+			-operators
+	3.Environment
+		-Solution explorer
+	4.Build
+		-Segments and %usage
+	5.Debug
+		-CPU
+		-Flash memory map
+		-I/O
+		-Register address (pag.309)
+*/
+; Created: enero 2024
+; Author : jlb
+;
+
+; Replace with your application code
+.cseg	//Code Segment initialization
+.org 0x10 //Program Counter (PC) initialization
+.def My_Register = r17
+.def counter = r16
+
+		ldi Mi_Registro,0b0101_1010 ;0x5A
+		ldi r21,0xff ;
+		out DDRB,r21 ;Puerto B como salida
+		ldi contador,0x00 ;Registro como contador
+
+start:
+		out PORTB,contador ;Escribe en Puerto B 
+		inc contador ;Incrementa contador
+		rjmp start ;Repite al infinito (y más alla)
