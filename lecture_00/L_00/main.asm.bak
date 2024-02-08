@@ -1,5 +1,9 @@
 ;
 ; L_00.asm
+;
+; Created: 2/7/2024 7:56:21 PM
+; Author : jlb
+;
 /*
 	1.DataSheet
 		-AVR CPU Core
@@ -21,22 +25,22 @@
 		-I/O
 		-Register address (pag.309)
 */
-; Created: enero 2024
+; Created: 2024
 ; Author : jlb
 ;
 
 ; Replace with your application code
 .cseg	//Code Segment initialization
 .org 0x10 //Program Counter (PC) initialization
-.def My_Register = r17
-.def counter = r16
+.def My_Register = r17 //simbolic name for register
+.def counter = r16	//simbolic name for register
 
-		ldi Mi_Registro,0b0101_1010 ;0x5A
-		ldi r21,0xff ;
-		out DDRB,r21 ;Puerto B como salida
-		ldi contador,0x00 ;Registro como contador
+		ldi My_Register,0b0101_1010 ;0x5A
+		ldi r21,0xff; //directly acces to register number
+		out DDRB,r21;Port B output
+		ldi counter,0x00; init counter
 
 start:
-		out PORTB,contador ;Escribe en Puerto B 
-		inc contador ;Incrementa contador
-		rjmp start ;Repite al infinito (y más alla)
+		out PORTB,counter; write on port B
+		inc counter ;increment counter
+		rjmp start ; got to "start" and repeat

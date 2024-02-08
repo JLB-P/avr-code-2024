@@ -1,5 +1,10 @@
 ;
 ; L_00.asm
+;
+; Created: 2/7/2024 7:56:21 PM
+; Author : jlb
+; Introduction to AVR assembler
+;
 /*
 	1.DataSheet
 		-AVR CPU Core

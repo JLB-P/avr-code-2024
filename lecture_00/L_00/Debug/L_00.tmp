@@ -1,18 +1,18 @@
 <ASSEMBLER_INFO>
  <VERSION>2.2.8</VERSION>
  <DEVICE>"ATmega328P"</DEVICE>
- <WORKING_DIR>C:\repo\2024-2_avr-code\L_00\L_00\Debug</WORKING_DIR>
+ <WORKING_DIR>C:\repo\avr-code-2024\lecture_00\L_00\Debug</WORKING_DIR>
  <INCLUDE_PATH>
   <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc</DIR>
   <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
   <DIR></DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>C:\repo\2024-2_avr-code\L_00\L_00\main.asm</SOURCE_FILE>
+ <SOURCE_FILE>C:\repo\avr-code-2024\lecture_00\L_00\main.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc\m328Pdef.inc</FILE>
  </INCLUDED_FILES>
  <OBJECT_FILES>
-  <FILE>C:\repo\2024-2_avr-code\L_00\L_00\Debug\L_00.obj</FILE>
+  <FILE>C:\repo\avr-code-2024\lecture_00\L_00\Debug\L_00.obj</FILE>
  </OBJECT_FILES>
  <HEX_FILES>
   <FILE>L_00.hex</FILE>
@@ -22,6 +22,6 @@
   <FILE>L_00.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <start><FILE>C:\repo\2024-2_avr-code\L_00\L_00\main.asm</FILE><LINE>39</LINE></start>
+  <start><FILE>C:\repo\avr-code-2024\lecture_00\L_00\main.asm</FILE><LINE>39</LINE></start>
  </LABELS>
 </ASSEMBLER_INFO>

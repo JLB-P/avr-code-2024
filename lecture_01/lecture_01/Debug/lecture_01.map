@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_00\L_00\main.asm Tue Feb 06 19:25:00 2024
+AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm Wed Feb 07 19:47:16 2024
 
 
 EQU  SIGNATURE_000 0000001e
@@ -695,6 +695,11 @@ EQU  ACIaddr      0000002e
 EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
-DEF  My_Register  r17
-DEF  counter      r16
-CSEG start        00000014
+DEF  temp         r16
+DEF  counter      r17
+DEF  multiplier   r18
+CSEG start        00000006
+CSEG on_off       00000008
+CSEG delay        0000000f
+CSEG c2           0000000f
+CSEG c1           00000010
