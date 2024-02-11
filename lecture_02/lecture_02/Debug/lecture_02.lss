@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_02\lecture_02\main.asm Wed Feb 07 20:39:08 2024
+AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_02\lecture_02\main.asm Sun Feb 11 15:52:09 2024
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc\m328Pdef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc\m328Pdef.inc'
@@ -1006,8 +1006,8 @@ AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_02\lecture_02\main.asm Wed Feb 
 000003 bf0d                      	out SPL,temp
                                  	;two ways of set PB5
                                  	//sbi DDRB,PB5 ; PB5->output
-000004 e200                      	ldi r16,0b00100000 
-000005 b904                      	out DDRB,r16 ; PB5->output
+000004 e200                      	ldi temp,0b00100000 
+000005 b904                      	out DDRB,temp ; PB5->output
                                  	;init TIMER0 (datasheet pag.117)
 000006 e005                      	ldi temp,1 << CS02 | 1 << CS00 ;Precaler=1024
 000007 bd05                      	out TCCR0B, temp	
@@ -1018,31 +1018,28 @@ AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_02\lecture_02\main.asm Wed Feb 
                                  	;so 3,125/250=12.5 it requires 12 repeatitions of 250 times
                                  			
                                  start:
-000008 b103                      	in	R16,PINB
-000009 7108                      	andi r16,0b00011000
-00000a f7e9                      	brne start	   	
-00000b 9a2d                      	sbi PORTB,PB5	;writes logic "1" on PB5
-00000c d003                      	rcall delay		;wait for 200ms
-00000d 982d                      	cbi PORTB,PB5	;writes logic "0" on PB5
-00000e d001                      	rcall delay		;wait for 200ms
-00000f cff8                      	rjmp start
+000008 9a2d                      	sbi PORTB,PB5	;writes logic "1" on PB5
+000009 d003                      	rcall delay		;wait for 200ms
+00000a 982d                      	cbi PORTB,PB5	;writes logic "0" on PB5
+00000b d001                      	rcall delay		;wait for 200ms
+00000c cffb                      	rjmp start
                                  
                                  //Subroutines
                                  ; delay using TIMER0
                                  Delay:
-000010 e020                      	ldi counter,0
-000011 bd26                      	out TCNT0,counter ;init counter on 0
-000012 e010                      	ldi repeat,0;
+00000d e020                      	ldi counter,0
+00000e bd26                      	out TCNT0,counter ;init counter on 0
+00000f e010                      	ldi repeat,0;
                                  ciclo:
-000013 b526                      	in counter,TCNT0
-000014 3f2a                      	cpi counter,250
-000015 f7e9                      	brne ciclo
-000016 e020                      	ldi counter,0
-000017 bd26                      	out TCNT0,counter ;init coounter on 0
-000018 9513                      	inc repeat
-000019 301c                      	cpi repeat,12
-00001a f7c1                      	brne ciclo
-00001b 9508                      	ret	;end of soubroutine
+000010 b526                      	in counter,TCNT0
+000011 3f2a                      	cpi counter,250
+000012 f7e9                      	brne ciclo
+000013 e020                      	ldi counter,0
+000014 bd26                      	out TCNT0,counter ;init coounter on 0
+000015 9513                      	inc repeat
+000016 301c                      	cpi repeat,12
+000017 f7c1                      	brne ciclo
+000018 9508                      	ret	;end of soubroutine
 
 
 RESOURCE USE INFORMATION
@@ -1062,22 +1059,22 @@ counted separately from r26..r31 here.
 "ATmega328P" register use summary:
 x  :   0 y  :   0 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  10 r17:   3 r18:   6 r19:   0 r20:   0 
+r13:   0 r14:   0 r15:   0 r16:   8 r17:   3 r18:   6 r19:   0 r20:   0 
 r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
 r29:   0 r30:   0 r31:   0 
 Registers used: 3 out of 35 (8.6%)
 
 "ATmega328P" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
-andi  :   1 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
+andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
 brcc  :   0 brcs  :   0 break :   0 breq  :   0 brge  :   0 brhc  :   0 
 brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
-brne  :   3 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
+brne  :   2 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   1 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
 cpi   :   2 cpse  :   0 dec   :   0 eor   :   0 fmul  :   0 fmuls :   0 
-fmulsu:   0 icall :   0 ijmp  :   0 in    :   2 inc   :   1 jmp   :   0 
+fmulsu:   0 icall :   0 ijmp  :   0 in    :   1 inc   :   1 jmp   :   0 
 ld    :   0 ldd   :   0 ldi   :   7 lds   :   0 lpm   :   0 lsl   :   0 
 lsr   :   0 mov   :   0 movw  :   0 mul   :   0 muls  :   0 mulsu :   0 
 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   6 pop   :   0 
@@ -1087,12 +1084,12 @@ sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 seh   :   0
 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 sev   :   0 
 sez   :   0 sleep :   0 spm   :   0 st    :   0 std   :   0 sts   :   0 
 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
-Instructions used: 12 out of 113 (10.6%)
+Instructions used: 11 out of 113 (9.7%)
 
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000038     56      0     56   32768   0.2%
+[.cseg] 0x000000 0x000032     50      0     50   32768   0.2%
 [.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 

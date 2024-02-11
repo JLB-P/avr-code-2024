@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_02\lecture_02\main.asm Wed Feb 07 20:39:08 2024
+AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_02\lecture_02\main.asm Sun Feb 11 15:52:09 2024
 
 
 EQU  SIGNATURE_000 0000001e
@@ -699,5 +699,5 @@ DEF  temp         r16
 DEF  repeat       r17
 DEF  counter      r18
 CSEG start        00000008
-CSEG delay        00000010
-CSEG ciclo        00000013
+CSEG delay        0000000d
+CSEG ciclo        00000010

@@ -22,10 +22,10 @@
   <FILE>lecture_01.lss</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <start><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>26</LINE></start>
-  <on_off><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>33</LINE></on_off>
-  <delay><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>45</LINE></delay>
-  <c2><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>46</LINE></c2>
-  <c1><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>47</LINE></c1>
+  <start><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>28</LINE></start>
+  <on_off><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>35</LINE></on_off>
+  <delay><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>47</LINE></delay>
+  <c2><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>48</LINE></c2>
+  <c1><FILE>C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm</FILE><LINE>49</LINE></c1>
  </LABELS>
 </ASSEMBLER_INFO>

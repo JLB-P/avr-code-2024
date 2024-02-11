@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm Wed Feb 07 19:47:16 2024
+AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm Thu Feb 08 19:15:52 2024
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc\m328Pdef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc\m328Pdef.inc'
@@ -989,6 +989,8 @@ AVRASM ver. 2.2.8  C:\repo\avr-code-2024\lecture_01\lecture_01\main.asm Wed Feb 
                                  ;
                                  ; Created: 2/7/2024 6:49:37 PM
                                  ; Author : jlb
+                                 ; Program to generate a discrete signal
+                                 ; using delay subroutine
                                  ;
                                  .cseg	;code segment origin
                                  .org 0x00

@@ -20,8 +20,8 @@
 	out SPL,temp
 	;two ways of set PB5
 	//sbi DDRB,PB5 ; PB5->output
-	ldi r16,0b00100000 
-	out DDRB,r16 ; PB5->output
+	ldi temp,0b00100000 
+	out DDRB,temp ; PB5->output
 	;init TIMER0 (datasheet pag.117)
 	ldi temp,1 << CS02 | 1 << CS00 ;Precaler=1024
 	out TCCR0B, temp	
@@ -32,9 +32,6 @@
 	;so 3,125/250=12.5 it requires 12 repeatitions of 250 times
 			
 start:
-	in	R16,PINB
-	andi r16,0b00011000
-	brne start	   	
 	sbi PORTB,PB5	;writes logic "1" on PB5
 	rcall delay		;wait for 200ms
 	cbi PORTB,PB5	;writes logic "0" on PB5
