@@ -1,0 +1,28 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\repo\avr-code-2024\lecture_03\lecture_03\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\repo\avr-code-2024\lecture_03\lecture_03\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\repo\avr-code-2024\lecture_03\lecture_03\Debug\lecture_03.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>lecture_03.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>lecture_03.map</FILE>
+  <FILE>lecture_03.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <start><FILE>C:\repo\avr-code-2024\lecture_03\lecture_03\main.asm</FILE><LINE>24</LINE></start>
+  <led_on><FILE>C:\repo\avr-code-2024\lecture_03\lecture_03\main.asm</FILE><LINE>30</LINE></led_on>
+ </LABELS>
+</ASSEMBLER_INFO>

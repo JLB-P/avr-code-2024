@@ -1,0 +1,31 @@
+<circuit type="simulide_1.0" rev="1007" stepSize="1000000" stepsPS="1000000" NLsteps="100000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="628,420" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="lecture_03/Debug/lecture_03.hex" Auto_Load="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" />
+
+<item itemtype="Switch" CircId="Switch-2" mainComp="false" Show_id="false" Show_Val="false" Pos="716,512" rotation="0" hflip="1" vflip="1" label="Switch-2" idLabPos="-12,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Ground" CircId="Ground-4" mainComp="false" Show_id="false" Show_Val="false" Pos="752,540" rotation="0" hflip="1" vflip="1" label="Ground-4" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Led" CircId="Led-6" mainComp="false" Show_id="false" Show_Val="false" Pos="720,456" rotation="0" hflip="1" vflip="1" label="Led-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Probe" CircId="Probe-31" mainComp="false" Show_id="false" Show_Val="true" Pos="724,480" rotation="-45" hflip="1" vflip="1" label="Probe-31" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Node" CircId="Node-12" mainComp="false" Pos="752,512" />
+
+<item itemtype="Node" CircId="Node-33" mainComp="false" Pos="696,512" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Switch-2-switch0pinN" endpinid="Node-12-0" pointList="732,512,752,512" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Node-12-2" endpinid="Ground-4-Gnd" pointList="752,512,752,524" />
+
+<item itemtype="Connector" uid="Connector-11" startpinid="Led-6-rPin" endpinid="Node-12-1" pointList="736,456,752,456,752,512" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="mega328-1-PORTB5" endpinid="Led-6-lPin" pointList="668,500,692,500,692,456,704,456" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Switch-2-pinP0" endpinid="Node-33-0" pointList="700,512,696,512" />
+
+<item itemtype="Connector" uid="Connector-32" startpinid="Probe-31-inpin" endpinid="Node-33-1" pointList="708,496,696,496,696,512" />
+
+<item itemtype="Connector" uid="Connector-34" startpinid="Node-33-2" endpinid="mega328-1-PORTB4" pointList="696,512,668,512,668,508" />
+
+</circuit>

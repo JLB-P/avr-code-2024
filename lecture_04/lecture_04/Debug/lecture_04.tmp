@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\repo\avr-code-2024\lecture_04\lecture_04\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\avrasm\inc\m328Pdef.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\Debug\lecture_04.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>lecture_04.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>lecture_04.map</FILE>
+  <FILE>lecture_04.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <my_variable><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>29</LINE></my_variable>
+  <my_variable_1><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>30</LINE></my_variable_1>
+  <my_variable_2><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>31</LINE></my_variable_2>
+  <constant_1><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>36</LINE></constant_1>
+  <constant_2><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>37</LINE></constant_2>
+  <constant_3><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>38</LINE></constant_3>
+  <constant_4><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>39</LINE></constant_4>
+  <constant_5><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>40</LINE></constant_5>
+  <start><FILE>C:\repo\avr-code-2024\lecture_04\lecture_04\main.asm</FILE><LINE>48</LINE></start>
+ </LABELS>
+</ASSEMBLER_INFO>
