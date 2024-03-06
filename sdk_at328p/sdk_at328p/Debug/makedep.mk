@@ -2,7 +2,9 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-lcd_4b.c
+i2c.c
+
+lcd_i2c.c
 
 leds.c
 

@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "Win64",
+            "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:\\WinAVR-20100110\\avr\\include"

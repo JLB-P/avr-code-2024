@@ -8,14 +8,16 @@
 #include <avr/io.h>
 #include "ports.h"
 #include "leds.h"
-#include "lcd_4b.h"
+#include "i2c.h"
+#include "lcd_i2c.h"
 int main(void)
 {
     /* Replace with your application code */
     init_ports();
 	led_on_off();
-	lcd_init();
-	lcd_write_string("todos reprobados");
+	init_i2c();
+	lcd_i2c_init();
+	lcd_i2c_write_string("todos reprobados");
 	while (1) 
     {
     }
