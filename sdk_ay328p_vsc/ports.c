@@ -15,11 +15,11 @@ PORTB|	LCD
 PB0	|	RS
 PB1	|	RW
 PB2	|	E
-PB3	|	D4
-PB4	|	D5
-PD2	|	D6
-PD3	|	D7
+PB3	|	
+PB4	|	D4
+PB5	|	D5
+PB6	|	D6
+PB7	|	D7
 */	
 	DDRB = 0xFF;
-	DDRD |= (1 << PD2) | (1 << PD3);
 }

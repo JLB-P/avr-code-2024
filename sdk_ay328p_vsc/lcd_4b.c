@@ -4,7 +4,7 @@
  * Created: 6/24/2021 7:47:30 AM
  *  Author: jlb
  */ 
-#define F_CPU 16000000UL //arduino freq.
+//#define F_CPU 16000000UL //arduino freq.
 #include <avr/io.h>
 #include <util/delay.h>
 #include "LCD_4b.h"
@@ -51,7 +51,7 @@ void lcd_cmd (char cmd)
 void lcd_init (void)
 {
 	lcd_reset();        // Reset lcd
-	lcd_cmd(0x2C);		// Function Set:4 bits, 2 lines, resolution 5×10
+	lcd_cmd(0x2C);		// Function Set:4 bits, 2 lines, resolution 5ï¿½10
 	lcd_cmd(0x0C);      // Display control: LCD on, cursor on, blinking
 	lcd_cmd(0x06);      // Entry mode: Increment
 	lcd_cmd(0x80);      // point to DDRAM

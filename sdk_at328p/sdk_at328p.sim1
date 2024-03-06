@@ -16,26 +16,26 @@
 
 <item itemtype="Connector" uid="connector-16" startpinid="mega328-1-PORTB4" endpinid="Bus-3-ePin5" pointList="692,628,716,628,716,684,612,684" />
 
-<item itemtype="Connector" uid="connector-17" startpinid="mega328-1-PORTB5" endpinid="Bus-3-ePin6" pointList="692,620,720,620,720,692,612,692" />
-
 <item itemtype="Connector" uid="connector-18" startpinid="mega328-1-PORTB6" endpinid="Bus-3-ePin7" pointList="644,612,620,612,620,700,612,700" />
 
 <item itemtype="Connector" uid="connector-19" startpinid="mega328-1-PORTB7" endpinid="Bus-3-ePin8" pointList="644,620,624,620,624,708,612,708" />
 
-<item itemtype="Connector" uid="Connector-20" startpinid="Hd44780-2-PinRS" endpinid="Bus-12-ePin1" pointList="260,588,260,604,404,604" />
+<item itemtype="Connector" uid="connector-20" startpinid="Hd44780-2-PinRS" endpinid="Bus-12-ePin1" pointList="260,588,260,604,404,604" />
 
-<item itemtype="Connector" uid="Connector-21" startpinid="Hd44780-2-PinRW" endpinid="Bus-12-ePin2" pointList="268,588,268,612,404,612" />
+<item itemtype="Connector" uid="connector-21" startpinid="Hd44780-2-PinRW" endpinid="Bus-12-ePin2" pointList="268,588,268,612,404,612" />
 
-<item itemtype="Connector" uid="Connector-22" startpinid="Hd44780-2-PinEn" endpinid="Bus-12-ePin3" pointList="276,588,276,620,404,620" />
+<item itemtype="Connector" uid="connector-22" startpinid="Hd44780-2-PinEn" endpinid="Bus-12-ePin3" pointList="276,588,276,620,404,620" />
 
-<item itemtype="Connector" uid="Connector-23" startpinid="Hd44780-2-dataPin4" endpinid="Bus-12-ePin5" pointList="316,588,316,636,404,636" />
+<item itemtype="Connector" uid="connector-23" startpinid="Hd44780-2-dataPin4" endpinid="Bus-12-ePin5" pointList="316,588,316,636,404,636" />
 
-<item itemtype="Connector" uid="Connector-24" startpinid="Hd44780-2-dataPin5" endpinid="Bus-12-ePin6" pointList="324,588,324,644,404,644" />
+<item itemtype="Connector" uid="connector-24" startpinid="Hd44780-2-dataPin5" endpinid="Bus-12-ePin6" pointList="324,588,324,644,404,644" />
 
-<item itemtype="Connector" uid="Connector-25" startpinid="Hd44780-2-dataPin6" endpinid="Bus-12-ePin7" pointList="332,588,332,652,404,652" />
+<item itemtype="Connector" uid="connector-25" startpinid="Hd44780-2-dataPin6" endpinid="Bus-12-ePin7" pointList="332,588,332,652,404,652" />
 
-<item itemtype="Connector" uid="Connector-26" startpinid="Hd44780-2-dataPin7" endpinid="Bus-12-ePin8" pointList="340,588,340,660,404,660" />
+<item itemtype="Connector" uid="connector-26" startpinid="Hd44780-2-dataPin7" endpinid="Bus-12-ePin8" pointList="340,588,340,660,404,660" />
 
-<item itemtype="Connector" uid="Connector-27" startpinid="Bus-3-busPinI" endpinid="Bus-12-busPinI" pointList="604,652,516,652,516,604,412,604" />
+<item itemtype="Connector" uid="connector-27" startpinid="Bus-3-busPinI" endpinid="Bus-12-busPinI" pointList="604,652,516,652,516,604,412,604" />
+
+<item itemtype="Connector" uid="connector-17" startpinid="mega328-1-PORTB5" endpinid="Bus-3-ePin6" pointList="692,620,720,620,720,692,612,692" />
 
 </circuit>
