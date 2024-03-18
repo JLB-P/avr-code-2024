@@ -10,6 +10,10 @@
 #include "leds.h"
 #include "i2c.h"
 #include "lcd_i2c.h"
+#include "ext_int.h"
+#include "comp.h"
+#include <avr/interrupt.h>
+
 int main(void)
 {
     /* Replace with your application code */
@@ -18,6 +22,10 @@ int main(void)
 	init_i2c();
 	lcd_i2c_init();
 	lcd_i2c_write_string("todos reprobados");
+	init_ext_int();
+	init_analog_comp();
+	//enable general interrupts sei
+	sei();
 	while (1) 
     {
     }

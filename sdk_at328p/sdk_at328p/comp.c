@@ -11,12 +11,15 @@
 
 ISR(ANALOG_COMP_vect)
 {
-	while ((ACSR & (1<<ACO)) !=0) //ACO=1 when AIN0>AIN1
+	lcd_i2c_col_row(1,2);
+	lcd_i2c_write_string("Vin > Vref");
+	_delay_ms(200);
+	lcd_i2c_clr();
 }
 
 void init_analog_comp(void)
 {
 	ACSR |= (1 << ACIS1)| (1 << ACIS0);//Interrupt when Input>VRef
 	ACSR |= (1 << ACIE);	//Enable interrupt
-	sei();//Enable global interrupts
+	
 }

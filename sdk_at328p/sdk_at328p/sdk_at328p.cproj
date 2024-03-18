@@ -121,6 +121,24 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="adc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="adc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="comp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="comp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ext_int.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ext_int.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="i2c.c">
       <SubType>compile</SubType>
     </Compile>
