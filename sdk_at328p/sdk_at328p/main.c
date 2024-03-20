@@ -16,7 +16,6 @@
 
 int main(void)
 {
-    /* Replace with your application code */
     init_ports();
 	led_on_off();
 	init_i2c();
@@ -24,9 +23,10 @@ int main(void)
 	lcd_i2c_write_string("todos reprobados");
 	init_ext_int();
 	init_analog_comp();
-	//enable general interrupts sei
-	sei();
-	while (1) 
+	/**********************************/
+	sei(); /*enable general interrupts*/
+	/**********************************/
+	while (1)
     {
     }
 }

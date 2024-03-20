@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+adc.c
+
 comp.c
 
 ext_int.c
@@ -15,4 +17,6 @@ leds.c
 main.c
 
 ports.c
+
+usart.c
 
