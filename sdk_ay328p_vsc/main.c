@@ -8,15 +8,27 @@
 #include <avr/io.h>
 #include "ports.h"
 #include "leds.h"
-#include "lcd_4b.h"
+#include "i2c.h"
+#include "lcd_i2c.h"
+#include "ext_int.h"
+#include "comp.h"
+#include "adc.h"
+#include <avr/interrupt.h>
+
 int main(void)
 {
-    /* Replace with your application code */
     init_ports();
 	led_on_off();
-	lcd_init();
-	lcd_write_string("todos reprobados");
-	while (1) 
+	init_i2c();
+	lcd_i2c_init();
+	lcd_i2c_write_string("todos reprobados");
+	//init_ext_int();
+	//init_analog_comp();
+	init_adc_withINT();
+	/**********************************/
+	sei(); /*enable general interrupts*/
+	/**********************************/
+	while (1)
     {
     }
 }

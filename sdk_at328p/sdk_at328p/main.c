@@ -12,6 +12,8 @@
 #include "lcd_i2c.h"
 #include "ext_int.h"
 #include "comp.h"
+#include "adc.h"
+#include "usart.h"
 #include <avr/interrupt.h>
 
 int main(void)
@@ -23,6 +25,8 @@ int main(void)
 	lcd_i2c_write_string("todos reprobados");
 	init_ext_int();
 	init_analog_comp();
+	init_adc_withINT();
+	init_usart(207);
 	/**********************************/
 	sei(); /*enable general interrupts*/
 	/**********************************/

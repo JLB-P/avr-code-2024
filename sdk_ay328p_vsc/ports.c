@@ -8,18 +8,11 @@
 
 void init_ports(void)
 {
-//LCD 4bit definition
-/*
-PORTB|	LCD
-----+--------
-PB0	|	RS
-PB1	|	RW
-PB2	|	E
-PB3	|	
-PB4	|	D4
-PB5	|	D5
-PB6	|	D6
-PB7	|	D7
-*/	
 	DDRB = 0xFF;
+	// PD2 input for INT0, PD3 input for INT1
+	DDRD &= (0 << PIND2) | (0 << PIND3);
+	PORTD |= (1 << PIND2) | (1 << PIND3); //enable Rp
+	// PC0 input for ADC0
+	DDRC &= (0 << PINC0);
+	PORTC |= (1 << PINC0); //enable Rp
 }

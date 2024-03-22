@@ -5,14 +5,17 @@
  *  Author: josel
  */ 
 #include <avr/io.h>
-#include <avr/delay.h>
-
+#include <util/delay.h>
+void led_on(char color)
+{
+	PORTB |= (1 << color);
+}
 void led_on_off (void)
 {
-	for (int i=0;i <= 10;i++)
+	for (int i=0;i <= 5;i++)
 	{
 	PORTB ^= 1 << PB5;
-	_delay_ms(500);
+	_delay_ms(200);
 	}
 }
 	
