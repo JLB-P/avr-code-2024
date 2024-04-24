@@ -45,6 +45,7 @@ C_SRCS +=  \
 ../leds.c \
 ../main.c \
 ../ports.c \
+../timers.c \
 ../usart.c
 
 
@@ -63,6 +64,7 @@ lcd_i2c.o \
 leds.o \
 main.o \
 ports.o \
+timers.o \
 usart.o
 
 OBJS_AS_ARGS +=  \
@@ -74,6 +76,7 @@ lcd_i2c.o \
 leds.o \
 main.o \
 ports.o \
+timers.o \
 usart.o
 
 C_DEPS +=  \
@@ -85,6 +88,7 @@ lcd_i2c.d \
 leds.d \
 main.d \
 ports.d \
+timers.d \
 usart.d
 
 C_DEPS_AS_ARGS +=  \
@@ -96,6 +100,7 @@ lcd_i2c.d \
 leds.d \
 main.d \
 ports.d \
+timers.d \
 usart.d
 
 OUTPUT_FILE_PATH +=sdk_at328p.elf
@@ -162,6 +167,13 @@ LINKER_SCRIPT_DEP+=
 	
 
 ./ports.o: .././ports.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./timers.o: .././timers.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG -DF_CPU=16000000  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

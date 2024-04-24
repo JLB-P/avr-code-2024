@@ -14,6 +14,7 @@
 #include "comp.h"
 #include "adc.h"
 #include "usart.h"
+#include "timers.h"
 #include <avr/interrupt.h>
 
 int main(void)
@@ -27,11 +28,20 @@ int main(void)
 	init_analog_comp();
 	init_adc_withINT();
 	init_usart(207);
+	/*test timer*******************/
+	//timer0_normalmode_noprescaler();
+	//timer0_normalmode_prescaler();
+	//timer0_overflow_interrupt();
+	//timer1_normalmode_noprescaler();
+	//timer1_CTCmode_interrupt();
+	//timer1_CTCmode_nonPWM();
+	timer1_fastPWM_inverting();
 	/**********************************/
 	sei(); /*enable general interrupts*/
 	/**********************************/
 	while (1)
     {
+		//usart_transmit(0x3E);
     }
 }
 

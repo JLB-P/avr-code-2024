@@ -18,5 +18,7 @@ main.c
 
 ports.c
 
+timers.c
+
 usart.c
 

@@ -17,17 +17,25 @@ ISR (USART_RX_vect)
 	usart_transmit(0x2D); //transmit "-"
 	usart_transmit(0x3E); //then ">" symbol
 	usart_transmit(usart_received_char);//char from keyboard
+	if (usart_received_char == '1')
+	{
+		PORTB |= 1 << PINB5;	
+	}
+	else
+	{
+		PORTB &= ~(1 << PINB5);	
+	}
 }
 
 unsigned char usart_receive( void )
 {
-  while ((UCSR0A & 0x80) == 0x00); // wait for data (RXC=1)
+  while (!(UCSR0A & (1 << RXC0))); // wait for data (RXC=1)
   return UDR0;
 }
 
-void usart_transmit( uint8_t data )
+void usart_transmit( unsigned char data )
 {
-  while ((UCSR0A & 0x20) == 0x00);  // wait for transmitter buffer empty(UDRE=1)
+  while (!(UCSR0A & (1 << UDRE0)));  // wait for transmitter buffer empty(UDRE=1)
   UDR0 = data; // when buffer empty, write data to UDR
 }
 
