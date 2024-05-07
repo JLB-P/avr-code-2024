@@ -33,9 +33,9 @@ int main(void)
 	//timer0_normalmode_prescaler();
 	//timer0_overflow_interrupt();
 	//timer1_normalmode_noprescaler();
-	//timer1_CTCmode_interrupt();
+	timer1_CTCmode_interrupt();
 	//timer1_CTCmode_nonPWM();
-	timer1_fastPWM_inverting();
+	//timer1_fastPWM_inverting();
 	/**********************************/
 	sei(); /*enable general interrupts*/
 	/**********************************/
