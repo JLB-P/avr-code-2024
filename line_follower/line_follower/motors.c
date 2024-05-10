@@ -1,8 +1,8 @@
 /*
  * motors.c
  *
- *  Created: 5/5/2024 9:42:15 PM
- *  Author: jlb
+ * Created: 5/5/2024 9:42:15 PM
+ * Author: jlb
  * Adapted from eXtremeElectronics library
  * Please give credit to www.eXtremeElectronics.co.in if you use
  * it in your projects and find it useful
