@@ -62,25 +62,25 @@ void test_leds()
 void ledon(uint8_t id)
 {
 		if (id<=4){
-			PORTD |= (1<<(id+3));
+			PORTD &= ~(1<<(id+3));
 		}
 		else if (id == 5){
-			PORTB |= (1<<PINB0);
+			PORTB &= ~(1<<PINB0);
 		}
 		else if (id == 6){
-			PORTB |= (1<<PINB3);
+			PORTB &= ~(1<<PINB3);
 		}
 }
 
 void ledoff(uint8_t id)
 {
 	if (id<=4){
-		PORTD &= ~(1<<(id+3));
+		PORTD |= (1<<(id+3));
 	}
 	if (id == 5){
-			PORTB &= ~(1<<PINB0);
+			PORTB |= (1<<PINB0);
 	}
     if (id == 6){
-			PORTB &= ~(1<<PINB3);
+			PORTB |= (1<<PINB3);
 		}
 }

@@ -21,19 +21,21 @@ int main(void)
 	adc_init();
 	//Initialize Motors
 	motors_init();
+	//test motors
 	motor_right(MOTOR_FORWARD,255);//255
 	motor_left(MOTOR_FORWARD,255);//255
-	_delay_ms(9000);
+	_delay_ms(1000);
 	motor_right(MOTOR_BACKWARD,255);//255
 	motor_left(MOTOR_BACKWARD,255);//255
-	_delay_ms(9000);
+	_delay_ms(1000);
 	motor_right(MOTOR_STOP,0);//255
 	motor_left(MOTOR_STOP,0);//255
-	_delay_ms(9000);
+	_delay_ms(1000);
 	
     while (1) 
     {	
-		
+		//Read sensor status through ADC
+		read_sensors();
     }
 }
 
